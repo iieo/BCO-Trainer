@@ -7,7 +7,7 @@ function generateModule() {
   let sheet = "M: 4/4\n" + "L:1/1\n" + "Q:75\n" + "|:";
   sheet += "c/4 c/4 c/4 c/4 |";
   while (len < 2) {
-    let ran = Math.round(Math.random() * 12);
+    let ran = Math.round(Math.random() * 11);
     let cPattern = getPattern(ran);
     len += cPattern.length;
     sheet += cPattern.patter + " ";
@@ -53,12 +53,9 @@ function getPattern(i) {
       pattern = { patter: "z/8", length: 0.25 };
       break;
     case 10:
-      pattern = { patter: "(3 c/8c/8c/8", length: 0.25 };
-      break;
-    case 11:
       pattern = { patter: "c/8c/16", length: 0.25 };
       break;
-    case 12:
+    case 11:
       pattern = { patter: "c/4", length: 0.25 };
       break;
   }
