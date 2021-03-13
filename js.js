@@ -4,12 +4,16 @@ let isPaperVisible = false;
 let visualObj, startAudioButton, stopAudioButton, paperSheet;
 function generateModule() {
   let len = 0;
-  let sheet = "M: 4/4\n" + "L:1/1\n" + "Q:95\n" + "|:";
+  let sheet = "M: 4/4\n" + "L:1/1\n" + "Q:75\n" + "" +"|:";
+  sheet += "c/4 c/4 c/4 c/4 |";
   while (len < 2) {
-    let ran = Math.round(Math.random() * 3);
+    let ran = Math.round(Math.random() * 7);
     let cPattern = getPattern(ran);
     len += cPattern.length;
     sheet += cPattern.patter + " ";
+    if (len%1===0) {
+      sheet += "|"
+    }
   }
   console.log(sheet);
   return sheet;
@@ -25,14 +29,33 @@ function getPattern(i) {
       pattern = { patter: "c/4", length: 0.25 };
       break;
     case 2:
-      pattern = { patter: "a/4", length: 0.25 };
+      pattern = { patter: "z/4", length: 0.25 };
       break;
     case 3:
       pattern = { patter: "c/8c/8", length: 0.25 };
       break;
+    case 4:
+      pattern = { patter: "c/8c/16c/16", length: 0.25 };
+      break;
+    case 5:
+      pattern = { patter: "c/16c/16c/8", length: 0.25 };
+      break;
+    case 6:
+      pattern = { patter: "c/6c/16", length: 0.25 };
+      break;
+    case 7:
+      pattern = { patter: "(3c/8c/8c/8", length: 0.25 };
+      break;
+    case 8:
+      pattern = { patter: "z/8 c/8", length: 0.25 };
+      break;
+    case 9:
+      pattern = { patter: "z/8", length: 0.25 };
+      break;
   }
   return pattern;
 }
+
 function load() {
   initMusic();
   initToggleVisibilityBtn();
