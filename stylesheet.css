@@ -36,7 +36,7 @@ button {
   border: none;
   border-radius: 8px;
   box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.05);
-  margin: 0 10%;
+  margin: 0 5%;
 }
 button.playIcon {
   background: url("/rsc/play-outline.svg") no-repeat;
@@ -54,4 +54,11 @@ button.reloadIcon {
   background: url("/rsc/reload-outline.svg") no-repeat;
   background-color: #f39c12;
   fill: green;
+}
+
+#credits {
+  font-size: 0.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
