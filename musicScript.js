@@ -64,6 +64,7 @@ function getPattern(i) {
   }
   return pattern;
 }
+
 function load() {
   initMusic();
   initToggleVisibilityBtn();
