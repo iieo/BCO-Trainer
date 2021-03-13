@@ -1,0 +1,9 @@
+{
+  "name": "bco",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "abcjs": "^4.1.1"
+  }
+}
