@@ -6,7 +6,7 @@ function generateModule() {
   let len = 0;
   let sheet = "M: 4/4\n" + "L:1/1\n" + "Q:75\n" + "|:";
   sheet += "c/4 c/4 c/4 c/4 |";
-  while (len < 2) {
+  while (len < 1.75) {
     let ran = Math.round(Math.random() * 10);
     let cPattern = getPattern(ran);
     len += cPattern.length;
@@ -15,6 +15,7 @@ function generateModule() {
       sheet += "|";
     }
   }
+  sheet += "c/4||";
   console.log(sheet);
   return sheet;
 }
